@@ -62,11 +62,6 @@ Component({
   },
   pageLifetimes: {
     show() {
-      console.log(app.globalData)
-      this.setData({
-        userID: app.globalData.userID,
-        unitID: app.globalData.unitID
-      })
       this.loadMeetings()
     }
   },
@@ -222,7 +217,7 @@ Component({
             "finshTime": utils.toTTime(new Date(finishTimeStamp)),
             "status": "未通知",
             "roomID": this.properties.roomParams.roomID,
-            "userID": app.globalData.userID,
+            "userID": userID,
             "subscribedTime": utils.toTTime(new Date())
           },
           success(res) {

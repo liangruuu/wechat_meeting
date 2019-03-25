@@ -1,7 +1,7 @@
 // pages/order-detail/order-detail.js
 const utils = require('../../utils/util.js')
 const app = getApp()
-const [baseUrl] = app.globalData.baseUrl
+const baseUrl = app.globalData.baseUrl
 Page({
   /**
    * 页面的初始数据
@@ -48,8 +48,8 @@ Page({
   onLoad: function (options) {
     let createUser = this.data.createUser
     createUser.data = {
-      name: app.globalData.userName,
-      jobNumber: app.globalData.jobNumber
+      name: wx.getStorageSync("userName"),
+      jobNumber: wx.getStorageSync("jobNumber")
     }
     wx.setStorageSync('chosedLists', '')
     wx.setStorageSync('chosedStatus', '')
@@ -61,9 +61,6 @@ Page({
     })
     console.log(this.data)
     this.getInfo()
-    this.loadUsersNumber()
-  },
-  onShow: function (options) {
     this.loadUsersNumber()
   },
   chooseUser: function () {
@@ -138,7 +135,7 @@ Page({
   },
   getInfo: function () {
     let that = this
-    let url = `${baseUrl}/workunits/${that.data.unitID}/users/${that.data.userID}/meetings/${this.data.meetingId}`
+    let url = `${baseUrl}/workunits/${that.data.unitID}/users/${that.data.userID}/meetings/${that.data.meetingId}`
     console.log(url)
     wx.request({
       url: url,

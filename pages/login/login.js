@@ -48,10 +48,7 @@ Page({
           wx.setStorageSync("userName", that.data.userName)
           wx.setStorageSync("jobNumber", that.data.jobNumber)
           wx.setStorageSync("userID", res.data.userID)
-          // app.globalData.unitID = that.data.unitID
-          // app.globalData.userName = that.data.userName
-          // app.globalData.jobNumber = that.data.jobNumber
-          // app.globalData.userID = res.data.userID
+          that.getUserLists()
           wx.switchTab({
             url: '/pages/homepage/homepage'
           })
@@ -63,6 +60,45 @@ Page({
             duration: 2000
           });
         }
+      }
+    })
+  },
+  getUserLists: function () {
+    let dptmLists = []
+    console.log
+    let unitID = wx.getStorageSync("unitID");
+    wx.request({
+      url: `${baseUrl}/workunits/${unitID}/users`,
+      success(res) {
+        let userLists = res.data
+        for (let i = 0; i < userLists.length; i++) {
+          let userItem = userLists[i]
+          for (var j = 0; j < dptmLists.length; j++) {
+            if (dptmLists[j].department === userLists[i].department) {
+              dptmLists[j].userLists.push({
+                "jobNumber": userItem.jobNumber,
+                "userName": userItem.userName,
+                "userID": userItem.userID,
+                "delayIndex": userItem.delayIndex
+              })
+              break
+            }
+          }
+          if (j === dptmLists.length) {
+            dptmLists.push({
+              "department": userItem.department,
+              "userLists": []
+            })
+            dptmLists[j].userLists.push({
+              "jobNumber": userItem.jobNumber,
+              "userName": userItem.userName,
+              "userID": userItem.userID,
+              "delayIndex": userItem.delayIndex
+            })
+          }
+        }
+        console.log("hahah", dptmLists)
+        wx.setStorageSync('dptmLists', dptmLists)
       }
     })
   }

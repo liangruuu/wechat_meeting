@@ -161,7 +161,7 @@ Page({
     console.log(that.data.orderLists)
     console.log(e.currentTarget.dataset)
     wx.showActionSheet({
-      itemList: !status ? ['预约详情', '取消预约'] : ['预约详情'],
+      itemList: !status ? ['预约详情', '取消预约'] : ['预约详情', '踩上一个会议'],
       success(res) {
         if (res.tapIndex == 1) {
           let lists = that.data.orderLists

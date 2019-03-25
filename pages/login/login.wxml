@@ -1,5 +1,4 @@
 <view class="login-container">
-  <input class="input" />
   <view class="background">
     <image src="../../img/background.png"></image>
     <view class="text">智能会议室管理系统</view>
