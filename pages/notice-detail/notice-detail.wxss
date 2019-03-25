@@ -1,0 +1,85 @@
+/* pages/order-detail/order-detail.wxss */
+
+.container {
+  display: flex;
+  flex-flow: column;
+  padding-top: 10rpx;
+}
+
+.title {
+  margin: 15rpx 0 20rpx 30rpx;
+  font-size: 30rpx;
+}
+
+.detail-title {
+  height: 75rpx;
+  line-height: 75rpx;
+  font-size: 35rpx;
+}
+
+.detail-items {
+  width: 95%;
+  border-radius: 15rpx;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.detail-item, .detail-title {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  height: 75rpx;
+  line-height: 75rpx;
+  font-size: 30rpx;
+  padding: 0 20rpx 0 20rpx;
+}
+
+.detail-content {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  height: 300rpx;
+  font-size: 30rpx;
+  padding: 10rpx 10rpx 0 10rpx;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+.text-content {
+  position: relative;
+  height: 70%;
+  width: 100%;
+  overflow-y:scroll;
+}
+
+.detail-file {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.detail-btn {
+  font-size: 35rpx;
+  width: 60%;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin: 30rpx auto;
+  text-align: center;
+  color: rgb(255, 78, 146);
+  border-radius: 35rpx;
+  border: 2rpx solid rgb(255, 78, 146);
+}
+
+.item-img {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 40rpx;
+  margin: 25rpx 0 0 0;
+}
+
+.special-data{
+  margin-right: 50rpx;
+}

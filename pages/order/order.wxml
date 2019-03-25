@@ -1,0 +1,29 @@
+<import src="/component/order-item-template/order-item-template.wxml" />
+<view class="orders-container">
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+      我发布的
+    </view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+      我相关的
+    </view>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{height}}rpx">
+    <swiper-item>
+      <block wx:for="{{orderLists}}" wx:for-item="listItem" wx:for-index="listIndex" wx:key="listIdx">
+        <view class='lists-date'>{{listItem.date}}</view>
+        <block wx:for="{{listItem.orders}}" wx:for-item="orderItem" wx:for-index="orderIndex" wx:key="orderIdx">
+          <template is="order-item-template" data="{{...orderItem,listIndex,orderIndex, currentTab}}"></template>
+        </block>
+      </block>
+    </swiper-item>
+    <swiper-item>
+      <block wx:for="{{relatedOrderLists}}" wx:for-item="listItem" wx:for-index="listIndex" wx:key="listIdx">
+        <view class='lists-date'>{{listItem.date}}</view>
+        <block wx:for="{{listItem.orders}}" wx:for-item="orderItem" wx:for-index="orderIndex" wx:key="orderIdx">
+          <template is="order-item-template" data="{{...orderItem,listIndex,orderIndex, currentTab}}"></template>
+        </block>
+      </block>
+    </swiper-item>
+  </swiper>
+</view>

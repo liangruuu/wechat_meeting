@@ -1,0 +1,33 @@
+<!-- pages/order-detail/order-detail.wxml -->
+<view class='container'>
+  <view class='title'>会议标题</view>
+  <view class='detail-items'>
+    <input type="text" class='detail-title' placeholder='请输入会议标题' bindinput='meetingTitle' value="{{title}}"></input>
+  </view>
+  <view class='title' maxlength="500">会议内容</view>
+  <view class='detail-items'>
+    <view class='detail-content'>
+      <textarea class='text-content' placeholder='请输入会议内容' bindinput='meetingContents' value="{{contents}}"></textarea>
+      <image class='detail-file' src="/img/file.png"></image>
+    </view>
+  </view>
+  <view class='title'>预约信息</view>
+  <view class='detail-items'>
+    <block wx:for="{{defaultData}}" wx:for-item="item" wx:key="idx">
+      <view class='detail-item'>
+        <view class='detail-name'>{{item.name}}</view>
+        <view class='detail-data'>{{item.data}}</view>
+      </view>
+    </block>
+    <view class='detail-item'>
+      <view class='detail-name'>{{createUser.name}}</view>
+      <view class='detail-data'>{{createUser.data.name}}</view>
+    </view>
+    <view class='detail-item'>
+      <view class='detail-name'>参会人</view>
+      <view class='special-data'>已选择{{joinUser.count}}人</view>
+      <image src='/img/arrows-r.png' class='item-img' bindtap='chooseUser'></image>
+    </view>
+  </view>
+  <view class='detail-btn' bindtap='finish'>完成</view>
+</view>

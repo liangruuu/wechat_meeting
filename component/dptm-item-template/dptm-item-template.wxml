@@ -1,0 +1,6 @@
+<template name='dptm-item-template'>
+  <view class='dptm-item-container'>
+    <image class='arrows' src='{{img}}' bindtap='isOpen' data-dptmIndex="{{dptmIndex}}"></image>
+    <view class='dptm-name'>{{department}}</view>
+  </view>
+</template>

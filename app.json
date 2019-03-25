@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/homepage/homepage",
+    "pages/order/order",
+    "pages/userlists/userlists",
+    "pages/notice-detail/notice-detail",
+    "pages/order-detail/order-detail",
+    "pages/time-template/time-template",
+    "component/room-item/room-item"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eee",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
+  },
+  "networkTimeout": {
+    "request": 120000,
+    "downloadFile": 120000,
+    "connectSocket": 120000,
+    "uploadFile": 120000
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "会议室",
+        "iconPath": "/img/meeting1.png",
+        "selectedIconPath": "/img/meeting2.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "我的预约",
+        "iconPath": "/img/order1.png",
+        "selectedIconPath": "/img/order2.png"
+      }
+    ]
+  },
+  "debug": true
+}

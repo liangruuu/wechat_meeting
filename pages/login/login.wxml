@@ -1,0 +1,25 @@
+<view class="login-container">
+  <input class="input" />
+  <view class="background">
+    <image src="../../img/background.png"></image>
+    <view class="text">智能会议室管理系统</view>
+  </view>
+  <view class="view-item">
+    <view class="view-name">公司码</view>
+    <input class="input" name="userName" bindinput="UnitIdInput" />
+    <image class="qrcode" src="../../img/qrcode.png">
+      
+    </image>
+  </view>
+  <view class="view-item">
+    <view class="view-name">工号</view>
+    <input class="input" bindinput="jobNumberInput" />
+  </view>
+  <view class="view-item">
+    <view class="view-name">姓名</view>
+    <input class="input" name="userName" bindinput="userNameInput" />
+  </view>
+  <view>
+    <button class="loginBtn" bindtap="loginBtnClick">登录</button>
+  </view>
+</view>

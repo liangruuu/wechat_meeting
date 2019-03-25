@@ -1,0 +1,24 @@
+<template name="order-item-template">
+  <view class='container'>
+    <view class='order-date'>
+      <view class='day'>{{day}}</view>
+      <view class='week'>星期{{week}}</view>
+    </view>
+    <view class='order-middle'>
+      <view class='title'>这是会议的标题</view>
+      <view class='content'>
+        <view class='time'>{{startTime}}-{{finishTime}}</view>
+        <view class='position'>{{meetingRoom}}</view>
+      </view>
+    </view>
+    <view class='order-right'>
+      <view class='status'>{{status}}</view>
+      <block wx:if="{{!currentTab}}">
+        <image class='operate' src="/img/more.png" data-listIndex='{{listIndex}}' data-orderIndex='{{orderIndex}}' bindtap='showOperation' data-status='{{currentTab}}' data-meetingid='{{meetingID}}'></image>
+      </block>
+      <block wx:else>
+        <image class='operate' src="/img/more.png" data-listIndex='{{listIndex}}' data-orderIndex='{{orderIndex}}' bindtap='showOperation' data-status='{{currentTab}}' data-meetingid='{{meetingID}}'></image>
+      </block>
+    </view>
+  </view>
+</template>

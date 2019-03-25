@@ -1,0 +1,32 @@
+<view class='room-container'>
+  <view class='room-name'>{{roomParams.roomName}}</view>
+  <view class='room-order'>
+    <picker mode="multiSelector" bindcolumnchange="bindMultiPickerColumnChange" bindchange="bindStartMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class='picker-btn'>
+        预定
+      </view>
+    </picker>
+  </view>
+  <view class='room-content'>{{roomParams.config}}</view>
+  <view class='time-line'>
+    <view class='pass-line'>
+      <block wx:for="{{timeLists}}" wx:for-item="timeItem" wx:for-index="timeIdx" wx:key="idx">
+        <view wx:if="{{timeIdx <= curHours * 2 + curMinutes}}" class='timeItem time-pass'></view>
+        <view wx:else class='timeItem'></view>
+      </block>
+    </view>
+    <block wx:for="{{meetings}}" wx:for-item="meetingItem" wx:for-index="meetingIdx" wx:key="idx">
+      <view class='meeting-line'>
+        <block wx:for="{{timeLists}}" wx:for-item="timeItem" wx:for-index="timeIdx" wx:key="idx">
+          <view wx:if="{{meetingItem.startHours * 2 + meetingItem.startMinutes <= timeIdx && timeIdx <= meetingItem.finishHours * 2 + meetingItem.finishMinutes}}" class='timeItem time-ing'></view>
+          <view wx:else class='timeItem'></view>
+        </block>
+      </view>
+    </block>
+  </view>
+  <view class='time-number'>
+    <view>00:00</view>
+    <view>12:00</view>
+    <view>24:00</view>
+  </view>
+</view>

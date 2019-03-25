@@ -1,0 +1,13 @@
+<!-- pages/homepage.wxml -->
+<import src="/component/topbar-template/topbar-template.wxml" />
+<view class="homepage-container">
+  <view class="fix">
+    <template is="topbar-template" data="{{locationArray}}"></template>
+    <date bind:myevent="onMyEvent"></date>
+  </view>
+  <view class="room-item">
+    <block wx:for="{{meetingRooms}}" wx:for-item="roomItem" wx:for-index="roomIdx" wx:key="idx">
+      <room-item roomParams="{{roomItem}}" timeParams="{{timeParams}}" timeStr="{{timeStr}}"></room-item>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+<!-- pages/order-detail/order-detail.wxml -->
+<view class='container'>
+  <view class='title'>会议标题</view>
+  <view class='detail-items'>
+    <view class='detail-title'>{{title}}</view>
+  </view>
+  <view class='title'>会议内容</view>
+  <view class='detail-items'>
+    <view class='detail-content'>
+      <text class='text-content'>{{contents}}</text>
+      <image class='detail-file' src="/img/file.png"></image>
+    </view>
+  </view>
+  <view class='title'>预约信息</view>
+  <view class='detail-items'>
+    <block wx:for="{{lists}}" wx:for-item="item" wx:key="idx">
+      <view class='detail-item'>
+        <view class='detail-name'>{{item.name}}</view>
+        <view class='detail-data'>{{item.data}}</view>
+      </view>
+    </block>
+    <block wx:for="{{users}}" wx:for-item="item" wx:key="idx">
+      <view class='detail-item'>
+        <view class='detail-name'>{{item.name}}</view>
+        <block wx:for="{{item.data}}" wx:for-item="user" wx:key="idx">
+          <view class='detail-data'>{{user.userName}}</view>
+        </block>
+      </view>
+    </block>
+    <view class='detail-item'>
+      <view class='detail-name'>状态</view>
+      <view class='detail-data'>{{status}}</view>
+    </view>
+  </view>
+  <!-- <view class='detail-btn'>取消预约</view> -->
+</view>

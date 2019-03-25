@@ -1,0 +1,31 @@
+.container {
+  height: 110rpx;
+  position: relative;
+}
+
+.avatar {
+  float: left;
+  width: 80rpx;
+  height: 80rpx;
+  margin: 15rpx 0 0 20rpx;
+  border-radius: 100rpx;
+  background-color: rebeccapurple;
+}
+
+.name {
+  float: left;
+  width: 80rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  margin-left: 30rpx;
+}
+
+.radio Image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40rpx;
+  margin: auto;
+  width: 50rpx;
+  height: 50rpx;
+}

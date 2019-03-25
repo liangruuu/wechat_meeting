@@ -1,0 +1,33 @@
+<view class="cells">
+  <view class="item" wx:for="{{List}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+    <view bindtap="isOpen" class="cdn" data-index="{{item.id}}">
+      <view>
+        <image class="img" src="{{item.iamges}}" mode="aspectFill" />
+        <text class="content">{{item.cont}}</text>
+      </view>
+      <view>
+        <text class="discount">{{item.discount}}</text>
+        <image class="icon_img" src="{{item.down}}" />
+      </view>
+    </view>
+    <view hidden="{{item.hiddena}}" class="hidden">
+      <block wx:for="{{item.invalidActivty}}" wx:for-index="index" wx:for-item="items" wx:key="index">
+        <view class="buys">
+          <view class="v1">
+            <navigator>
+              <text class="new-price">{{items.price}}</text>
+              <text class="oldPrice">{{items.oldPrice}}</text>
+            </navigator>
+            <navigator>
+              <text class="buy">{{items.validType}}</text>
+              <text style="font-size: 24rpx;margin-left: 20rpx;color: #6C6C6C">{{items.validTime}}</text>
+            </navigator>
+          </view>
+          <view class="shopping">
+            <text>购买</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

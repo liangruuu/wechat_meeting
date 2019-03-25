@@ -1,0 +1,20 @@
+<!--pages/userlists/userlists.wxml-->
+<import src='/component/dptm-item-template/dptm-item-template.wxml' />
+
+<view class='userListContainer'>
+  <scroll-view class="chosedLists" scroll-x="true">
+    <block wx:for="{{chosedLists}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+      <image class='chosedAvatar' src='/img/user.png'></image>
+    </block>
+  </scroll-view>
+  <view class='dptmLists-container'>
+    <block wx:for="{{dptmLists}}" wx:for-item="listItem" wx:for-index="dptmIndex" wx:key="dptmIdx">
+      <template is="dptm-item-template" data="{{...listItem, ...{dptmIndex:dptmIndex, img:imgLists[dptmIndex]} }}"></template>
+      <view class='userLists-container' hidden="{{hiddenLists[dptmIndex]}}">
+        <block wx:for="{{listItem.userLists}}" wx:for-item="userItem" wx:for-index="userIndex" wx:key="userIdx">
+          <user-item userName="{{userItem.userName}}" userIndex="{{userIndex}}" dptmIndex="{{dptmIndex}}" bind:myevent="changeActivate"></user-item>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>

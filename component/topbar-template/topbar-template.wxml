@@ -1,0 +1,10 @@
+<template name="topbar-template">
+  <view class='topbar-container'>
+    <image class='notice' src="/img/notice.png"></image>
+    <view class='middle'>
+      <view class='position'>会议地点</view>
+      <select prop-array='{{locationArray}}' class="list" bind:myevent="forMeetingRooms"></select>
+    </view>
+    <image class='qrcode' src="/img/qrcode.png"></image>
+  </view>
+</template>

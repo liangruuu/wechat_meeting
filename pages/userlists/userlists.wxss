@@ -1,0 +1,39 @@
+/* pages/userlists/userlists.wxss */
+@import "/component/dptm-item-template/dptm-item-template.wxss";
+
+/* 最外层的container*/
+
+.userListContainer {
+  display: flex;
+  flex-flow: column;
+}
+
+.chosedAvatar {
+  width: 80rpx;
+  height: 80rpx;
+  background-color: red;
+  margin-left: 20rpx;
+  margin-top: 25rpx;
+}
+
+.chosedLists {
+  width: 95%;
+  height: 120rpx;
+  margin: 10rpx auto;
+  white-space: nowrap;
+  border-radius: 10rpx;
+  background-color: white;
+}
+
+.userLists-container {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 20rpx;
+}
+
+.dptmLists-container {
+  width: 95%;
+  border-radius: 10rpx;
+  background-color: white;
+  margin: 10rpx auto;
+}

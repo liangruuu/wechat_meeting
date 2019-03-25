@@ -1,0 +1,125 @@
+/* .container {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  height: 250rpx;
+  width: 95%;
+  border-radius: 15rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  background: linear-gradient(to right, rgb(107, 195, 250), rgb(47, 150, 253));
+}
+
+.meeting-status {
+  position: absolute;
+  right: 20rpx;
+  top: 15rpx;
+  color: white;
+}
+
+.contentStyle {
+  font-size: 30rpx;
+}
+
+.titleStyle {
+  font-size: 40rpx;
+  font-weight: 400;
+}
+
+.meeting-title {
+  margin: 10rpx 0 0 20rpx;
+  color: white;
+}
+
+.meeting-time, .meeting-position {
+  margin: 30rpx 0 0 20rpx;
+  color: white;
+}
+
+.meeting-start {
+  color: red;
+}
+
+.meeting-end {
+  color: gray;
+} */
+
+.container {
+  display: flex;
+  flex-flow: row;
+  position: relative;
+  height: 170rpx;
+  width: 95%;
+  border-bottom: 1rpx solid rgb(110, 110, 110);
+  margin: 0 auto;
+  align-items: center;
+}
+
+.order-date {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 110rpx;
+  height: 110rpx;
+  background-color: rgb(0, 127, 255);
+  margin: 0 20rpx 0 0;
+  border-radius: 10rpx;
+  color: white;
+}
+
+.order-date .day {
+  font-size: 50rpx;
+}
+
+.order-date .week {
+  font-size: 30rpx;
+}
+
+.order-middle {
+  flex: 5;
+  height: 150rpx;
+}
+
+.order-middle .title {
+  font-size: 40rpx;
+}
+
+.order-right {
+  flex: 1;
+}
+
+.order-right {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  font-size: 30rpx;
+  height: 130rpx;
+  align-items: center;
+}
+
+.order-right .status {
+  flex: 3;
+}
+
+.order-right .operate {
+  flex: 1;
+  width: 60rpx;
+  height: 50rpx;
+}
+
+.order-middle .title {
+  font-size: 35rpx;
+  margin: 15rpx 0 30rpx 0;
+}
+
+.order-middle .content {
+  display: flex;
+  flex-flow: row;
+  font-size: 30rpx;
+  color: rgb(100, 100, 100);
+}
+
+.order-middle .time {
+  margin-right: 20rpx;
+}

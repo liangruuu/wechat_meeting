@@ -1,0 +1,34 @@
+.topbar-container {
+  display: flex;
+  flex-flow: row;
+  height: 100rpx;
+  line-height: 100rpx;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(243, 243, 243);
+  border-bottom: 1rpx solid black;
+}
+
+.topbar-container .notice {
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 20rpx;
+}
+
+.topbar-container .middle {
+  display: flex;
+  flex-flow: row;
+  font-size: 35rpx;
+  flex: 3;
+  margin-left: 60rpx;
+}
+
+.topbar-container .qrcode {
+  height: 60rpx;
+  width: 60rpx;
+  margin-right: 20rpx;
+}
+
+.topbar-container .list {
+  margin: 20rpx 0 0 40rpx;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "date": "/component/date/date",
+    "room-item": "/component/room-item/room-item",
+    "select": "/component/select/select"
+  }
+}

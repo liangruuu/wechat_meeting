@@ -1,0 +1,88 @@
+.room-container {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  height: 250rpx;
+  width: 95%;
+  border-radius: 15rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  background-color: white;
+  /* background: linear-gradient(to right, rgb(107, 195, 250), rgb(47, 150, 253)); */
+}
+
+.room-name {
+  margin: 10rpx 0 0 20rpx;
+  font-size: 40rpx;
+  font-weight: 400;
+}
+
+.room-order {
+  position: absolute;
+  right: 20rpx;
+  top: 15rpx;
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: white;
+  text-align: center;
+  background-color: rgb(50, 150, 249);
+}
+
+.room-content {
+  font-size: 30rpx;
+  margin: 15rpx 0 20rpx 20rpx;
+  width: 500rpx;
+  overflow: hidden;
+  word-break: keep-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.time-line {
+  position: relative;
+  width: 90%;
+  height: 50rpx;
+  margin: 0rpx auto;
+  border: 1rpx solid rgb(207, 207, 207);
+}
+
+.pass-line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+}
+
+.time-pass {
+  background-color: rgb(229, 229, 229);
+  z-index: 1;
+}
+
+.meeting-line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+}
+
+.timeItem {
+  flex: 1;
+}
+
+.time-ing {
+  background-color: rgb(151, 176, 216);
+}
+
+.time-number {
+  display: flex;
+  flex-flow: row;
+  width: 95%;
+  margin: 0 auto;
+  justify-content: space-between;
+  font-size: 20rpx;
+  color: gray;
+}
