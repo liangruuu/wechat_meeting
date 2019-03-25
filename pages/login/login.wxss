@@ -20,7 +20,7 @@
   position: absolute;
   top: 40%;
   left: 15%;
-  color: red;
+  color: rgb(0, 127, 255);
   font-size: 60rpx;
   font-weight: bold;
 }
@@ -59,7 +59,9 @@
   height: 80%;
 }
 
-.loginBtn{
+.loginBtn {
   width: 70%;
+  color: white;
   margin: 30rpx auto;
+  background-color: rgb(0, 127, 255)
 }

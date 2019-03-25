@@ -61,6 +61,8 @@ Page({
     })
     console.log(this.data)
     this.getInfo()
+  },
+  onShow: function () {
     this.loadUsersNumber()
   },
   chooseUser: function () {
@@ -70,6 +72,7 @@ Page({
   },
   loadUsersNumber: function () {
     let chosedLists = wx.getStorageSync('chosedLists')
+    console.log('有人',chosedLists.length)
     if (chosedLists) {
       this.setData({
         joinUser: {

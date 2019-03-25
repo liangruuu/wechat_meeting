@@ -66,7 +66,7 @@ Page({
         let orders = res.data
         for (let item in orders) {
           monthStr = utils.formatMonth(new Date(orders[item].startTime))
-          let [startHours, finishHours, startMinutes, finishMinutes] = [utils.addZero(new Date(orders[item].startTime).getHours()),
+          let [startHours, startMinutes, finishHours, finishMinutes] = [utils.addZero(new Date(orders[item].startTime).getHours()),
             utils.addZero(new Date(orders[item].startTime).getMinutes()),
             utils.addZero(new Date(orders[item].finshTime).getHours()),
             utils.addZero(new Date(orders[item].finshTime).getMinutes())
